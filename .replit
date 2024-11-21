@@ -1,0 +1,16 @@
+modules = ["nodejs-20:v20-lts", "python-3.12"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["bash", "start.sh"]
+deploymentTarget = "node"
+
+[[ports]]
+localPort = 3000
+externalPort = 80
+
+[[ports]]
+localPort = 8000
+externalPort = 8000
